@@ -29,3 +29,19 @@ initParam = json.loads('{"name":"Keynan", "age":34, "city":"Ramat Gan"}')
 keynan = Person(initParam)
 
 print(keynan)
+
+
+class ToDo:
+    def __init__(self, d):
+        self.__dict__ = d
+    def __str__(self):
+        result = ""
+        for k, v in self.__dict__.items():
+            result += k
+            result += " : "
+            result += str(v)
+            result += '\n'
+        return result
+
+todo_44 = ToDo(r)
+print(todo_44)
